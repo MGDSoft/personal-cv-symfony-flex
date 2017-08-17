@@ -6,7 +6,6 @@
         "doctrine/doctrine-bundle": "^1.7",
         "doctrine/orm": "^2.5",
         "javiereguiluz/easyadmin-bundle": "^1.16",
-        "overblog/graphql-bundle": "^0.8.7",
         "stof/doctrine-extensions-bundle": "^1.2",
         "symfony/debug-bundle": "^3.3",
         "symfony/flex": "^1.0",
