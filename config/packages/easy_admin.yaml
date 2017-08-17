@@ -1,0 +1,27 @@
+easy_admin:
+    entities:
+        Skill:
+            class: App\Entity\Skill
+            form:
+                fields:
+                    - name
+                    - score
+                    - skillMainCategory
+                    - skillSecondaryCategory
+                    - enabled
+
+        main_category:
+            class: App\Entity\SkillMainCategory
+            label: 'Main Categories'
+            form:
+                fields:
+                    - name
+                    - description
+
+        secondary_category:
+            class: App\Entity\SkillSecondaryCategory
+            label: 'Secondary Categories'
+            form:
+                fields:
+                    - name
+                    - description

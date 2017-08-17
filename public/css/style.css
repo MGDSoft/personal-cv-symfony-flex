@@ -1,0 +1,252 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background: #000;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 2rem;
+}
+
+
+/*
+ * Header
+ */
+
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: bold;
+  color: rgba(255,255,255,.5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+  -webkit-transition: 1s; /* Safari */
+  transition: 1s;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.nav-masthead .nav-link:hover{
+    -webkit-transform:rotate(-25deg);
+    -moz-transform:rotate(-25deg);
+    -o-transform:rotate(-25deg);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  body{
+    background-image: url('../img/background.jpg');
+    background-position: center;
+  }
+  .masthead-brand {
+    text-align: center;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+
+    color: rgba(255,255,255,.5);
+}
+
+h1 {
+
+    margin-bottom: 30px;
+
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
+
+
+img.me {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    border: 4px solid #fff;
+    box-shadow: 0px 0px 2px 1px #444;
+    margin-bottom: 50px;
+    animation-name: me;
+    animation-duration: 2s;
+    -webkit-transition: .5s;
+    transition: .5s;
+    width: 200px;
+    height: 200px;
+}
+
+img.me:hover {
+    width: 150px;
+    height: 150px;
+}
+
+table{
+    text-align: right;
+    background: rgba(136, 136, 136, 0.23);
+}
+
+tr, td{
+    border: 0px !important;
+}
+
+.container{
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+.main-category-block{
+    background: #131313;
+    padding: 20px 15px;
+    border-radius: 20px;
+    opacity: 0.9;
+    border: 4px solid #000;
+}
+
+.main-category-title{
+    margin-bottom: 20px;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 40em) {
+  /* Pull out header and footer */
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+/*
+ * Animations
+ */
+
+
+@media (min-width: 62em) {
+  .mastfoot,
+  .cover-container {
+    width: 42rem;
+  }
+}
+
+@keyframes me {
+    0%   { margin-left: 2000px;}
+    100% {margin-left: 0px;}
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-8px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(8px, 0, 0);
+  }
+}

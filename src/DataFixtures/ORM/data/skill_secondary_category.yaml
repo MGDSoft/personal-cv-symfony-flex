@@ -1,0 +1,11 @@
+App\Entity\SkillSecondaryCategory:
+    skill_secondary_category_template:
+        name:  Template
+        order: 1
+    skill_main_category_testing:
+        name:  Testing
+        order: 2
+    skill_main_category_db:
+        name:  DataBase
+        order: 3
+

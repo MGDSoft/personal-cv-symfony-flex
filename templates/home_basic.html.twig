@@ -1,0 +1,61 @@
+{# skills \App\Entity\Skill[] #}
+{% extends "_layout.html.twig" %}
+
+{% block content %}
+
+    <div class="container">
+        <img src="/img/me.png" class="me" alt="Miguel García Domínguez">
+        <div class="row">
+
+            {% set currentMainCategory = false %}
+            {% set currentSecondaryCategory = false %}
+
+            {% for skill in skills %}
+                {% if skill.skillMainCategory is not same as(currentMainCategory) %}
+                    {% if currentMainCategory %}
+                                </tbody>
+                            </table>
+                        </div>
+                        {% set currentSecondaryCategory = false %}
+                    {% endif %}
+                    {% set currentMainCategory = skill.skillMainCategory %}
+                    <div class="main-category-block col-md-4">
+                        <div class="main-category-title h3">{{ currentMainCategory.name }}</div>
+                {% endif %}
+
+                {% if skill.skillSecondaryCategory is not same as(currentSecondaryCategory) %}
+                    {% if currentSecondaryCategory %}
+                            </tbody>
+                        </table>
+                    {% endif %}
+
+                    {% set currentSecondaryCategory = skill.skillSecondaryCategory %}
+
+                    <table class="table">
+                        <tbody>
+
+                            <tr>
+                                <th colspan="100%">
+                                    {% if skill.skillSecondaryCategory %}
+                                        {{ skill.skillSecondaryCategory.name }}
+                                    {% endif %}
+                                </th>
+                            </tr>
+
+                {% endif %}
+
+                <tr>
+                    <td>{{ skill.name }}</td>
+                    <td style='min-width: 200px'>
+                        <progress class='progress progress-striped progress-info' value='{{ skill.score }}' max='100'>{{ skill.score }}%</progress>
+                    </td>
+                </tr>
+
+            {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

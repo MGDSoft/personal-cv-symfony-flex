@@ -1,0 +1,11 @@
+App\Entity\SkillMainCategory:
+    skill_main_category_backend:
+        name:  Back-end
+        order: 1
+    skill_main_category_front:
+        name:  Front-end
+        order: 2
+    skill_main_category_extra:
+        name:  Extra Knowledge
+        order: 3
+

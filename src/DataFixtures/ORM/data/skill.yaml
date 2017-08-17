@@ -1,0 +1,24 @@
+App\Entity\Skill:
+    skill1_{1..4}:
+        name:  <skillBackName()>
+        score: <numberBetween(1, 100)>
+        skillMainCategory: '@skill_main_category_backend'
+    skill2_{1..2}:
+        name:  <skillBackTemplateName()>
+        score: <numberBetween(1, 100)>
+        skillMainCategory: '@skill_main_category_backend'
+        skillSecondaryCategory: '@skill_secondary_category_template'
+    skill3_{1..3}:
+        name:  <skillBackDBName()>
+        score: <numberBetween(1, 100)>
+        skillMainCategory: '@skill_main_category_backend'
+        skillSecondaryCategory: '@skill_main_category_db'
+    skill$_{1..5}:
+        name:  <skillFrontName()>
+        score: <numberBetween(1, 100)>
+        skillMainCategory: '@skill_main_category_front'
+    skill5_{1..3}:
+        name:  <skillExtraName()>
+        score: <numberBetween(1, 100)>
+        skillMainCategory: '@skill_main_category_extra'
+
