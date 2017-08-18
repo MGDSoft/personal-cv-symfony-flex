@@ -10,7 +10,7 @@ class HautelookFixturesDisabled extends Command
     {
         $this
             ->setName('hautelook:fixtures:load')
-            ->setDescription('This command is disabledDisabled :o, use doctrine:fixtures:load')
+            ->setDescription('This command is disabled :o, use doctrine:fixtures:load')
         ;
     }
 
