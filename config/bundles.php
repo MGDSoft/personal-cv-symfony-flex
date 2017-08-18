@@ -14,6 +14,4 @@ return [
     'Symfony\Bundle\MonologBundle\MonologBundle' => ['all' => true],
     'Hautelook\AliceBundle\HautelookAliceBundle' => ['dev' => true, 'test' => true],
     'Symfony\Bundle\DebugBundle\DebugBundle' => ['dev' => true, 'test' => true],
-    'Overblog\GraphQLBundle\OverblogGraphQLBundle' => ['all' => true],
-    'MedlabMG\YoushidoGraphQLExtendedBundle\YoushidoGraphQLExtendedBundle' => ['all' => true],
 ];
